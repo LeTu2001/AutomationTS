@@ -14,6 +14,14 @@ export const config: CodeceptJS.MainConfig = {
       browser: "chromium",
       url: "http://localhost",
       show: true,
+      chromium: {
+        args: [
+          '--disable-extensions',
+          '--disable-gpu',
+          '--no-sandbox',
+          '--disable-dev-shm-usage'
+        ]
+      }
     },
   },
   multiple: {
