@@ -125,7 +125,7 @@ Cú pháp **/*.feature cho phép tìm kiếm tất cả các file có đuôi .fe
 Ý nghĩa: Chỉ định vị trí của các file định nghĩa bước (step definitions).
 Tìm kiếm tất cả file TypeScript (.ts) trong thư mục step_definitions và các thư mục con.
 
-![](./step_definitions/assets/img1.png "Sau khi khởi tạo codecept thành công, các bạn sẽ thấy cấu trúc thư mục như sau:")
+![Sau khi khởi tạo codecept thành công, các bạn sẽ thấy cấu trúc thư mục như sau:](./step_definitions/assets/img1.png)
 
 ## Khởi động 
 ``` sh 
