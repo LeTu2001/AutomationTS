@@ -1,3 +1,21 @@
+# Ignore node_module
 node_modules
-.DS_Store
+
+# Ignore test output
 output
+allure-report
+
+# Ignore package lock
+package-lock.json
+yarn.lock
+
+# Ignore yarn error
+yarn-error.log
+
+# Ignore enviroment
+*.env
+
+# Ignore draft test files
+000000.feature
+_test_screens.ts
+.DS_Store

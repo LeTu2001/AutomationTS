@@ -172,6 +172,33 @@ CodeceptJS được phát hành dưới [Giấy phép MIT](LICENSE).
 
 ## Hỗ trợ
 
-Nếu bạn gặp vấn đề hoặc có câu hỏi, hãy tạo một issue trên [GitHub](https://github.com/codeceptjs/CodeceptJS/issues) hoặc tham gia [cộng đồng Slack](https://codecept.io/slack) của chúng tôi.
+Sau khi clone repository, chạy "npm i" hoặc "yarn install".
 
+Báo cáo kiểm thử HTML nằm trong thư mục allure-report, gõ "yarn report" sau khi chạy kiểm thử tính năng. Xem thêm các lệnh script trong file package.json.
 
+-------------------------------------------------------------------------------
+Nếu sử dụng IDE VSCode, có một số tiện ích mở rộng bạn có thể dùng:
+-------------------------------------------------------------------------------
+- Cucumber (Gherkin) Full Support 
+  + ID: alexkrechik.cucumberautocomplete
+  + Mô tả: Hỗ trợ đầy đủ ngôn ngữ Cucumber (Gherkin) cho VSCode Support + Formatting +      Autocomplete Version: 2.15.2 Publisher  
+  + Liên kết VS Marketplace: https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete
+
+- Prettier - Code formatter 
+  + ID: esbenp.prettier-vscode
+  + Mô tả: Công cụ định dạng code sử dụng prettier
+  + Phiên bản: 9.13.0
+  + Nhà phát hành: Prettier
+  + Liên kết VS Marketplace: https://marketplace.visualstudio.com/items?itemName=esbenp.    prettier-vscode
+- Prettier ESLint
+  + ID: rvest.vs-code-prettier-eslint
+  + Mô tả: Tiện ích mở rộng Visual Studio để định dạng code JavaScript và TypeScript sử dụng gói prettier-eslint
+   + Phiên bản: 5.1.0
+   + Nhà phát hành: Rebecca Vest 
+   + Liên kết VS Marketplace: https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint
+- Prettier ESLint TypeScript Formatter
+  + ID: hb432.prettier-eslint-typescript
+  + Mô tả: Định dạng code TypeScript thông qua Prettier, sau đó qua ESLint.
+  + Phiên bản: 1.0.5
+  + Nhà phát hành: Harrison Smith
+  + Liên kết VS Marketplace: https://marketplace.visualstudio.com/items?itemName=hb432.prettier-eslint-typescript
