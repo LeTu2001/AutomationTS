@@ -16,7 +16,7 @@ CodeceptJS là một framework kiểm thử end-to-end hiện đại cho các �
 ## Cài đặt
 Khởi tạo nhanh dự án Nodejs
 ```
-  npm init -y
+npm init -y
 ```
 Bắt đầu một dự án sử dụng CodeceptJS với Playwright làm framework
 ```
@@ -157,6 +157,30 @@ Tương tự như "dev", nhưng không có --verbose.
 - npm run dev hoặc yarn dev cho môi trường phát triển.
 - npm run prod hoặc yarn prod cho môi trường sản xuất.
 Các lệnh này giúp tự động hóa quá trình chạy kiểm tra và tạo báo cáo, giúp việc kiểm tra và gỡ lỗi trở nên dễ dàng hơn trong các môi trường khác nhau.
+
+## Lưu ý
+
+Để có thể commit or sync lên GitHub, chúng ta phải kiểm tra file mình clone về bằng đi đến thư mục đó
+ 
+ ```
+ cd <Tên thư mục>
+ ```
+Kiểm tra thư mục
+
+(kiểm tra tất cả các thư mục, cả thư mục bị ẩn đi)
+ ```
+ ls -a 
+ ```
+ Trong thư mục sẽ xuất hiện 1 thư mục
+ ```
+ . .. .git
+ ```
+ Lấy thư mục .git là ngoài thư mục chính (nếu có file .DS_Store thì cx lấy ra luôn)
+ ```
+ mv .git mv .DS_Store ..
+ ```
+
+ Sau đó chúng ta có thể Commit or Sync lên trên Github
 
 ## Hỗ trợ
 
