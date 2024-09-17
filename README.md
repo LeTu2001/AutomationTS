@@ -158,18 +158,6 @@ Tương tự như "dev", nhưng không có --verbose.
 - npm run prod hoặc yarn prod cho môi trường sản xuất.
 Các lệnh này giúp tự động hóa quá trình chạy kiểm tra và tạo báo cáo, giúp việc kiểm tra và gỡ lỗi trở nên dễ dàng hơn trong các môi trường khác nhau.
 
-## Tài liệu
-
-Để biết thêm thông tin chi tiết, vui lòng tham khảo [tài liệu chính thức](https://codecept.io/helpers/Playwright/#playwright).
-
-## Đóng góp
-
-Chúng tôi luôn chào đón sự đóng góp từ cộng đồng. Nếu bạn muốn đóng góp, hãy tham khảo [hướng dẫn đóng góp](CONTRIBUTING.md).
-
-## Giấy phép
-
-CodeceptJS được phát hành dưới [Giấy phép MIT](LICENSE).
-
 ## Hỗ trợ
 
 Sau khi clone repository, chạy "npm i" hoặc "yarn install".
@@ -202,3 +190,7 @@ Nếu sử dụng IDE VSCode, có một số tiện ích mở rộng bạn có t
   + Phiên bản: 1.0.5
   + Nhà phát hành: Harrison Smith
   + Liên kết VS Marketplace: https://marketplace.visualstudio.com/items?itemName=hb432.prettier-eslint-typescript
+
+  ## Tài liệu
+
+Để biết thêm thông tin chi tiết, vui lòng tham khảo [tài liệu chính thức](https://codecept.io/helpers/Playwright/#playwright).
