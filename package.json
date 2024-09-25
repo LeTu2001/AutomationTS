@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx codeceptjs run --verbose --features"
+    "dev": "npx codeceptjs run --verbose --features",
+    "prod" :"npx codeceptjs run --features --plugins allure"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "playwright": "^1.47.0"
   },
   "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
     "@types/node": "^22.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"

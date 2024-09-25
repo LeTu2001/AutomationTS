@@ -16,12 +16,12 @@ export const config: CodeceptJS.MainConfig = {
       show: true,
       chromium: {
         args: [
-          '--disable-extensions',
-          '--disable-gpu',
-          '--no-sandbox',
-          '--disable-dev-shm-usage'
-        ]
-      }
+          "--disable-extensions",
+          "--disable-gpu",
+          "--no-sandbox",
+          "--disable-dev-shm-usage",
+        ],
+      },
     },
   },
   multiple: {
@@ -36,5 +36,13 @@ export const config: CodeceptJS.MainConfig = {
   gherkin: {
     features: "./features/**/*.feature",
     steps: "./step_definitions/**/*.ts",
+  },
+  plugins: {
+    allure: {
+      enabled: true,
+      require: "@codeceptjs/allure-legacy",
+      outputDir: "./output",
+      useCucumberStepReporter: true,
+    },
   },
 };
