@@ -180,6 +180,73 @@ Nếu sử dụng IDE VSCode, có một số tiện ích mở rộng bạn có t
 
 Để biết thêm thông tin chi tiết, vui lòng tham khảo [tài liệu chính thức](https://codecept.io/helpers/Playwright/#playwright).
 
+# Allure
+**Allure** là một framework mã nguồn mở được thiết kế để tạo ra các báo cáo kiểm thử tự động có tính tương tác cao và dễ đọc.
+
+## Windowns
+ Để cài được allure codeceptjs playwright điều kiện phải có JAVA_HOME
+
+ Nếu chưa có thì chúng ta sẽ cài theo video hướng dẫn [Tại đây](https://www.youtube.com/watch?v=szRwhUl0awE&t=345s)
+
+ Sau khi đã có JAVA_HOME chúng ta sẽ bắt đầu cài đặt Allure và sẽ làm tương tự như JAVA_HOME
+
+Ở phần Variable Name chúng ta ghi tên ALLURE_Home 
+
+Ở phần Variable value chúng ta gán địa chỉ jdk như ở mục 2 
+
+Tiếp theo chúng phải đăng ký biến ALLURE vào Path, chọn Path ở System varibles chọn New, sau đó thêm %ALLURE_HOME%\bin chúng ta hoàn tất  hết trong cài đặt System properties 
+
+Để biết chúng ta đã cài thành công thì chúng ta vào Cmd(Command Prompt) gõ 
+``` 
+Allure --version
+```
+### Cài đặt
+
+Chúng ta vào trình soạn thảo mã nguồn (hiện tại chúng ta sẽ đang dùng VSCODE)
+
+```
+npm install -g allure-commandline --save-dev 
+```
+dòng lệnh trên được sử dụng để cài đặt Allure Command Line Interface (CLI) trong môi trường Node.js
+
+![](./step_definitions/assets/install_allure.png)
+
+Thư viện **allure-legacy**:
+```
+npm install @codeceptjs/allure-legacy --save-dev
+```
+
+Vào thư mục codeceptjs.conf.js để cấu hình cho allure
+
+``` typescript
+plugins: {
+    allure: {
+      enabled: true,
+      require: "@codeceptjs/allure-legacy",
+      outputDir: "./output/allure",
+      useCucumberStepReporter: true,
+    },
+  },
+
+```
+- plugins: Đây là phần cấu hình các plugin cho CodeceptJS.
+- allure: Cấu hình cụ thể cho plugin Allure.
+- enabled: true: Kích hoạt plugin Allure.
+- require: '@codeceptjs/allure-legacy': Chỉ định module cần sử dụng cho Allure, ở đây là phiên bản legacy.
+- outputDir: './output/allure': Đường dẫn thư mục để lưu trữ kết quả báo cáo Allure.
+- useCucumberStepReporter: true: Kích hoạt tính năng báo cáo theo từng bước của Cucumber, hữu ích khi sử dụng BDD (Behavior-Driven Development).
+
+Chúng ta sẽ chạy tất cả các bản test để tạo 1 báo 
+```
+npx codeceptjs run --plugins allure
+```
+Sever Allure
+```
+ allure serve output
+```
+- chúng ta sẽ bật serve mà trỏ đến thư mục chưa các file.xml
+
+![](./step_definitions/assets/file.xml.png)
 ## Lưu ý
 
 Để có thể commit or sync lên GitHub, chúng ta phải kiểm tra file mình clone về bằng đi đến thư mục đó
