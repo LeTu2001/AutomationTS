@@ -5,7 +5,6 @@
 CodeceptJS là một framework kiểm thử end-to-end hiện đại cho các ứng dụng web. Nó đơn giản hóa quá trình viết và thực thi các bài kiểm thử tự động bằng cách sử dụng cú pháp dễ đọc và dễ hiểu.
 
 ## Tính năng chính
-
 - **Đa nền tảng**: Hỗ trợ nhiều trình điều khiển như Playwright, Puppeteer, WebDriver, và TestCafe.
 - **Cú pháp BDD**: Viết các kịch bản kiểm thử bằng ngôn ngữ tự nhiên.
 - **Tích hợp AI**: Sử dụng CodeceptJS AI để tạo và duy trì các bài kiểm thử.
@@ -13,7 +12,23 @@ CodeceptJS là một framework kiểm thử end-to-end hiện đại cho các �
 - **Chạy song song**: Thực thi các bài kiểm thử đồng thời để tiết kiệm thời gian.
 - **Mở rộng**: Dễ dàng tùy chỉnh và mở rộng thông qua các plugin và helper.
 
-## Cài đặt
+*Sau khi clone repository, chúng ta sẽ chạy* 
+  ``` 
+  npm install
+  ```` 
+  and
+
+  ```
+  yarn install
+  ```
+*Test chạy thử nghiệm*
+  
+  ```
+  yarn dev features/TestLogin/TestLoginpage.feature 
+  ```
+## Để khởi tạo một dự án Automation bằng CodeceptJS Playwright
+Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
+
 Khởi tạo nhanh dự án Nodejs
 ```
 npm init -y
@@ -133,60 +148,6 @@ Sau khi khởi tạo codecept thành công, các bạn sẽ thấy cấu trúc t
 
 ![](./step_definitions/assets/img1.png)
 
-## Khởi động 
-``` sh 
-"scripts": {
-  "dev": "npx codeceptjs run --verbose --features",
-  "prod": "npx codeceptjs run --features --plugins allure" },
-```
-Phần này định nghĩa các lệnh tắt mà bạn có thể chạy bằng npm hoặc yarn. Cụ thể:
-
-"dev":
-- Lệnh này chạy CodeceptJS trong môi trường phát triển.
-- npx codeceptjs run chạy các bài kiểm tra CodeceptJS.
-- --verbose hiển thị thông tin chi tiết trong quá trình chạy.
-- --features chỉ định rằng chỉ chạy các tệp feature (thường là các kịch bản Gherkin).
-"prod":
-
-Lệnh này chạy CodeceptJS trong môi trường sản xuất.
-
-Tương tự như "dev", nhưng không có --verbose.
-
---plugins allure kích hoạt plugin Allure để tạo báo cáo kiểm tra.
-Để sử dụng các lệnh này, bạn có thể chạy:
-- npm run dev hoặc yarn dev cho môi trường phát triển.
-- npm run prod hoặc yarn prod cho môi trường sản xuất.
-Các lệnh này giúp tự động hóa quá trình chạy kiểm tra và tạo báo cáo, giúp việc kiểm tra và gỡ lỗi trở nên dễ dàng hơn trong các môi trường khác nhau.
-
-## Lưu ý
-
-Để có thể commit or sync lên GitHub, chúng ta phải kiểm tra file mình clone về bằng đi đến thư mục đó
- 
- ```
- cd <Tên thư mục>
- ```
-Kiểm tra thư mục
-
-(kiểm tra tất cả các thư mục, cả thư mục bị ẩn đi)
- ```
- ls -a 
- ```
- Trong thư mục sẽ xuất hiện 1 thư mục
- ```
- . .. .git
- ```
- Lấy thư mục .git là ngoài thư mục chính (nếu có file .DS_Store thì cx lấy ra luôn)
- ```
- mv .git mv .DS_Store ..
- ```
-
- Sau đó chúng ta có thể Commit or Sync lên trên Github
-
-## Hỗ trợ
-
-Sau khi clone repository, chạy "npm i" hoặc "yarn install".
-
-Báo cáo kiểm thử HTML nằm trong thư mục allure-report, gõ "yarn report" sau khi chạy kiểm thử tính năng. Xem thêm các lệnh script trong file package.json.
 
 -------------------------------------------------------------------------------
 Nếu sử dụng IDE VSCode, có một số tiện ích mở rộng bạn có thể dùng:
@@ -215,6 +176,53 @@ Nếu sử dụng IDE VSCode, có một số tiện ích mở rộng bạn có t
   + Nhà phát hành: Harrison Smith
   + Liên kết VS Marketplace: https://marketplace.visualstudio.com/items?itemName=hb432.prettier-eslint-typescript
 
-  ## Tài liệu
+## Tài liệu
 
 Để biết thêm thông tin chi tiết, vui lòng tham khảo [tài liệu chính thức](https://codecept.io/helpers/Playwright/#playwright).
+
+## Lưu ý
+
+Để có thể commit or sync lên GitHub, chúng ta phải kiểm tra file mình clone về bằng đi đến thư mục đó
+ 
+ ```
+ cd <Tên thư mục>
+ ```
+Kiểm tra thư mục
+
+(kiểm tra tất cả các thư mục, cả thư mục bị ẩn đi)
+ ```
+ ls -a 
+ ```
+ Lấy thư mục .git là ngoài thư mục chính
+ ```
+ mv .git ..
+ ```
+
+ Sau đó chúng ta có thể Commit or Sync lên trên Github
+
+ ## Khởi động 
+``` sh 
+"scripts": {
+  "dev": "npx codeceptjs run --verbose --features",
+  "prod": "npx codeceptjs run --features --plugins allure" },
+```
+Phần này định nghĩa các lệnh tắt mà bạn có thể chạy bằng npm hoặc yarn. Cụ thể:
+
+"dev":
+- Lệnh này chạy CodeceptJS trong môi trường phát triển.
+- npx codeceptjs run chạy các bài kiểm tra CodeceptJS.
+- --verbose hiển thị thông tin chi tiết trong quá trình chạy.
+- --features chỉ định rằng chỉ chạy các tệp feature (thường là các kịch bản Gherkin).
+
+"prod":
+
+Lệnh này chạy CodeceptJS trong môi trường sản xuất.
+
+Tương tự như "dev", nhưng không có --verbose.
+
+--plugins allure kích hoạt plugin Allure để tạo báo cáo kiểm tra.
+
+Để sử dụng các lệnh này, bạn có thể chạy:
+- npm run dev hoặc yarn dev cho môi trường phát triển.
+- npm run prod hoặc yarn prod cho môi trường sản xuất.
+Các lệnh này giúp tự động hóa quá trình chạy kiểm tra và tạo báo cáo, giúp việc kiểm tra và gỡ lỗi trở nên dễ dàng hơn trong các môi trường khác nhau.
