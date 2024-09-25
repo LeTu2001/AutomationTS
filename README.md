@@ -219,6 +219,7 @@ npm install @codeceptjs/allure-legacy --save-dev
 Vào thư mục codeceptjs.conf.js để cấu hình cho allure
 
 ``` typescript
+
 plugins: {
     allure: {
       enabled: true,
