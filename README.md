@@ -242,9 +242,10 @@ Kiểm tra thư mục
   "dev": "npx codeceptjs run --verbose --features",
   "prod": "npx codeceptjs run --features --plugins allure" },
 ```
-"dev": "npx codeceptjs run --verbose --features": lệnh chạy bài kiểm tra nhanh dưới tên script trong file packega.json
+- *"dev"*: "npx codeceptjs run --verbose --features": lệnh chạy bài kiểm tra nhanh dưới tên script trong file packega.json
 (vd: yarn dev features/TestLogin/TestLoginpage.feature)
-"prod": "npx codeceptjs run --features --plugins allure": lệnh chạy tất cả các bài kiểm tra để tạo các file báo cáo dưới dạng file .xml dưới tên script trong file packega.json
+
+- *"prod"*: "npx codeceptjs run --features --plugins allure": lệnh chạy tất cả các bài kiểm tra để tạo các file báo cáo dưới dạng file .xml dưới tên script trong file packega.json
 (vd: yarn prod)
 
 -------------------------------------------------------------------------------
