@@ -157,7 +157,7 @@ Sau khi khởi tạo codecept thành công, các bạn sẽ thấy cấu trúc t
 
  Nếu chưa có thì chúng ta sẽ cài theo video hướng dẫn [Tại đây](https://www.youtube.com/watch?v=szRwhUl0awE&t=345s)
 
- Sau khi đã có JAVA_HOME chúng ta sẽ bắt đầu cài đặt Allure và sẽ làm tương tự như JAVA_HOME
+ Sau khi đã có JAVA_HOME chúng ta sẽ bắt đầu cài đặt Allure và sẽ làm tương tự như JAVA_HOME [Tại đây](https://github.com/allure-framework/allure-java/releases)
 
 Ở phần Variable Name chúng ta ghi tên ALLURE_Home 
 
