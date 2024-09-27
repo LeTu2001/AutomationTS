@@ -1,7 +1,7 @@
 # NodeJS
 - NodeJS là một môi trường chạy JavaScript ở phía máy chủ
 
-Để có thể chạy dự án thì chúng ta cần phải NodeJS về cho máy:
+### Để có thể chạy dự án thì chúng ta cần phải NodeJS về cho máy
 
 - Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
 
