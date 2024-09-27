@@ -1,3 +1,10 @@
+# NodeJS
+- NodeJS là một môi trường chạy JavaScript ở phía máy chủ
+
+Để có thể chạy dự án thì chúng ta cần phải NodeJS về cho máy:
+
+- Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
+
 # CodeceptJS
 
 ## Giới thiệu
@@ -27,8 +34,6 @@ CodeceptJS là một framework kiểm thử end-to-end hiện đại cho các �
   yarn dev features/TestLogin/TestLoginpage.feature 
   ```
 ## Để khởi tạo một dự án Automation bằng CodeceptJS Playwright
-Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
-
 Khởi tạo nhanh dự án Nodejs
 ```
 npm init -y
