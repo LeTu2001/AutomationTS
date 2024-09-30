@@ -6,7 +6,7 @@
 - Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
 - Sau đó chúng ta sẽ kiểm tra NodeJs thành công bằng cách bật terminal và gõ câu lệnh
 ```
-npm --version
+node --version
 ```
 
 # CodeceptJS
