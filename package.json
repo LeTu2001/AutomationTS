@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx codeceptjs run --verbose --features",
-    "prod" :"npx codeceptjs run --features --plugins allure"
+    "prod": "npx codeceptjs run --features --plugins allure"
   },
   "keywords": [],
   "author": "",

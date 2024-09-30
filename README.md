@@ -1,3 +1,14 @@
+# NodeJS
+- NodeJS là một môi trường chạy JavaScript ở phía máy chủ
+
+### Để có thể chạy dự án thì chúng ta cần phải NodeJS về cho máy
+
+- Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
+- Sau đó chúng ta sẽ kiểm tra NodeJs thành công bằng cách bật terminal và gõ câu lệnh
+```
+npm --version
+```
+
 # CodeceptJS
 
 ## Giới thiệu
@@ -27,8 +38,6 @@ CodeceptJS là một framework kiểm thử end-to-end hiện đại cho các �
   yarn dev features/TestLogin/TestLoginpage.feature 
   ```
 ## Để khởi tạo một dự án Automation bằng CodeceptJS Playwright
-Chúng ta sẽ cài nodejs. Hãy tìm phiên bản mới nhất của Nodejs [Tại Đây](https://nodejs.org/en/download/package-manager)
-
 Khởi tạo nhanh dự án Nodejs
 ```
 npm init -y
@@ -157,7 +166,7 @@ Sau khi khởi tạo codecept thành công, các bạn sẽ thấy cấu trúc t
 
  Nếu chưa có thì chúng ta sẽ cài theo video hướng dẫn [Tại đây](https://www.youtube.com/watch?v=szRwhUl0awE&t=345s)
 
- Sau khi đã có JAVA_HOME chúng ta sẽ bắt đầu cài đặt Allure và sẽ làm tương tự như JAVA_HOME
+ Sau khi đã có JAVA_HOME chúng ta sẽ bắt đầu cài đặt Allure và sẽ làm tương tự như JAVA_HOME [Tại đây](https://github.com/allure-framework/allure-java/releases)
 
 Ở phần Variable Name chúng ta ghi tên ALLURE_Home 
 
@@ -199,8 +208,6 @@ plugins: {
   },
 
 ```
-- plugins: Đây là phần cấu hình các plugin cho CodeceptJS.
-- allure: Cấu hình cụ thể cho plugin Allure.
 - enabled: true: Kích hoạt plugin Allure.
 - require: '@codeceptjs/allure-legacy': Chỉ định module cần sử dụng cho Allure, ở đây là phiên bản legacy.
 - outputDir: './output/allure': Đường dẫn thư mục để lưu trữ kết quả báo cáo Allure.
@@ -212,7 +219,7 @@ npx codeceptjs run --plugins allure
 ```
 Sever Allure
 ```
- allure serve output
+allure serve output
 ```
 - chúng ta sẽ bật serve mà trỏ đến thư mục chưa các file.xml
 
@@ -244,26 +251,11 @@ Kiểm tra thư mục
   "dev": "npx codeceptjs run --verbose --features",
   "prod": "npx codeceptjs run --features --plugins allure" },
 ```
-Phần này định nghĩa các lệnh tắt mà bạn có thể chạy bằng npm hoặc yarn. Cụ thể:
+- *"dev"*: "npx codeceptjs run --verbose --features": lệnh chạy bài kiểm tra nhanh dưới tên script trong file packega.json
+(vd: yarn dev features/TestLogin/TestLoginpage.feature)
 
-"dev":
-- Lệnh này chạy CodeceptJS trong môi trường phát triển.
-- npx codeceptjs run chạy các bài kiểm tra CodeceptJS.
-- --verbose hiển thị thông tin chi tiết trong quá trình chạy.
-- --features chỉ định rằng chỉ chạy các tệp feature (thường là các kịch bản Gherkin).
-
-"prod":
-
-Lệnh này chạy CodeceptJS trong môi trường sản xuất.
-
-Tương tự như "dev", nhưng không có --verbose.
-
---plugins allure kích hoạt plugin Allure để tạo báo cáo kiểm tra.
-
-Để sử dụng các lệnh này, bạn có thể chạy:
-- npm run dev hoặc yarn dev cho môi trường phát triển.
-- npm run prod hoặc yarn prod cho môi trường sản xuất.
-Các lệnh này giúp tự động hóa quá trình chạy kiểm tra và tạo báo cáo, giúp việc kiểm tra và gỡ lỗi trở nên dễ dàng hơn trong các môi trường khác nhau.
+- *"prod"*: "npx codeceptjs run --features --plugins allure": lệnh chạy tất cả các bài kiểm tra để tạo các file báo cáo dưới dạng file .xml dưới tên script trong file packega.json
+(vd: yarn prod)
 
 -------------------------------------------------------------------------------
 Nếu sử dụng IDE VSCode, có một số tiện ích mở rộng bạn có thể dùng:
