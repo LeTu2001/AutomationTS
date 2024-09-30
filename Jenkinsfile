@@ -8,6 +8,9 @@ pipeline {
     options {
         skipDefaultCheckout(true)
     }
+     tools {
+        nodejs 'NodeJS' // Tên này phải khớp với tên bạn đặt trong Global Tool Configuration
+    }
     stages {
         stage('Initializing') {
             steps {
